@@ -17,7 +17,7 @@ export default function EditTopicForm({ title, description, id }) {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ newTitle, newDescription }),
+        body: JSON.stringify({ title: newTitle, description: newDescription }),
       });
       if (!res.ok) {
         throw new Error("Failed to update topic");
